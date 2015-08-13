@@ -3,7 +3,7 @@ var frisby = require('frisby');
 
 var server = jsonServer.create(); // Returns an Express server
 server.use(jsonServer.defaults); // logger, static and cors middlewares
-server.listen(3003);
+server.listen(3000);
 
 describe("Services specs", function() {
 
@@ -13,7 +13,7 @@ describe("Services specs", function() {
   it("retrive a list of services", function() {
 
     frisby.create('Get single-deck')
-        .get("http://localhost:3003/api/services/")
+        .get("http://localhost:3000/api/services/")
         .expectStatus(200)
         .toss();
   });
